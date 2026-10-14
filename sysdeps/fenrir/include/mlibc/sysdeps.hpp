@@ -22,6 +22,7 @@ struct FenrirSysdepTags
     , TcbSet
     , VmMap
     , VmUnmap
+    , Waitpid
     , Write { };
 
 template <typename Tag>

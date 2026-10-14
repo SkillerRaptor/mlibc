@@ -322,6 +322,10 @@ elif host_machine.system() == 'ethereal'
 	internal_conf.set10('MLIBC_MMAP_ALLOCATE_DSO', false)
 	internal_conf.set10('MLIBC_MAP_FILE_WINDOWS', true)
 	subdir('sysdeps/ethereal')
+elif host_machine.system() == 'fenrir'
+	rtld_include_dirs += include_directories('sysdeps/fenrir/include')
+	libc_include_dirs += include_directories('sysdeps/fenrir/include')
+	subdir('sysdeps/fenrir')
 # ANCHOR: demo-sysdeps
 elif host_machine.system() == 'demo'
 	subdir('sysdeps/demo')

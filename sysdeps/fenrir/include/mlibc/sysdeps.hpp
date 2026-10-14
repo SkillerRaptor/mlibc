@@ -22,10 +22,13 @@ struct FenrirSysdepTags
     , TcbSet
     , VmMap
     , VmUnmap
-    , Waitpid
     , Write { };
 
 template <typename Tag>
 using Sysdeps = SysdepOf<FenrirSysdepTags, Tag>;
+
+struct SysdepTraits {
+	static constexpr bool usesRtNetlink = false;
+};
 
 } // namespace mlibc

@@ -129,7 +129,7 @@ int Sysdeps<VmMap>::operator()(void *, size_t, int, int, int, off_t, void **) { 
 
 int Sysdeps<VmUnmap>::operator()(void *, size_t) { STUB(); }
 
-int Sysdeps<Waitpid>::operator()(pid_t pid, int *status, int flags, struct rusage *ru, pid_t *ret_pid) { STUB(); }
+int Sysdeps<Waitpid>::operator()(pid_t, int *, int, struct rusage *, pid_t *) { STUB(); }
 
 int Sysdeps<Write>::operator()(int fd, const void *buffer, size_t count, ssize_t *bytes_written)
 {
